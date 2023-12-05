@@ -1,7 +1,12 @@
 import json
+from typing import Type
 from pydantic import BaseModel
 
 from anthropic import HUMAN_PROMPT, AI_PROMPT
+
+
+class Tool(BaseModel):
+    parameters: Type[BaseModel]
 
 
 _DEFAULT_TEMPLATE = f"""{HUMAN_PROMPT} \
