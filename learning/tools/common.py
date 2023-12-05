@@ -36,9 +36,9 @@ class SchemaTool(BaseModel, Generic[_Parameters]):
 
 
 _DEFAULT_TEMPLATE = f"""{HUMAN_PROMPT} \
-You an AI assistant using the {{tool_name}} tool, this is it's description: {{description}}
+You an AI assistant using the "{{tool_name}}" tool, this is it's description: {{description}}
 
-The response should be in the format:
+Your answer should be a valid JSON object that follows this schema:
 {{json_schema}}
 
 The situation you are using the tool in is: {{context}}
